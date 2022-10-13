@@ -1,9 +1,10 @@
 <script setup>
-import MenuItem from './MenuItem.vue';
-import MenuList from './MenuList.vue';
-import MenuActive from './MenuActive.vue';
+import MenuItem from "./MenuItem.vue";
+import MenuList from "./MenuList.vue";
+import MenuActive from "./MenuActive.vue";
+import Icon from "../assets/icons/Bronze_v3.svg";
 
-let activeItem = '';
+let activeItem = "";
 function onMenuClick(event) {
   console.log(event.target);
   activeItem.value = event.target;
@@ -12,20 +13,9 @@ function onMenuClick(event) {
 <template>
   <div
     id="top-menu"
-    class="
-      fixed
-      top-0
-      left-0
-      w-screen
-      bg-blue-900
-      flex
-      p-1
-      justify-between
-      h-16
-      z-2
-    "
+    class="fixed top-0 left-0 w-screen bg-blue-900 flex p-1 justify-between h-16 z-2"
   >
-    <img class="rounded-md" src="https://picsum.photos/60" alt="logo" />
+    <Icon class="fill-white icon-fix p-2" />
     <MenuList />
   </div>
   <MenuActive />
