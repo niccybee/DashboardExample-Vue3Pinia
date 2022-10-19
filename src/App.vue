@@ -6,7 +6,7 @@ import Action from "./components/Action.vue";
 </script>
 
 <template>
-  <div id="app" class="text-blue-900">
+  <div id="app" class="text-darkblue-900">
     <MenuTopBanner />
     <div id="app-body" class="flex w-full h-full">
       <NavSideMenu />

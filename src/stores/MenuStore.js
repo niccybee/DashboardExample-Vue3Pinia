@@ -18,6 +18,7 @@ import ShopIcon from "../assets/icons/Add_to_Cart_v3.svg";
 
 export const useMenuStore = defineStore("menu", {
   state: () => ({
+    showAction: false,
     activeItem: "",
     activeScreen: {
       component: "Dashboard",
@@ -85,44 +86,44 @@ export const useMenuStore = defineStore("menu", {
     ],
 
     menu: [
-      { text: "", body: "", link: "https://google.com", component: "" },
-      {
-        text: "",
-        active: false,
-        menuClass: "w-screen poop",
-        body: `<div
-          class="outline-red-500 bg-blue-500 text-white flex items-center justify-center
-            px-8
-            py-2
-            rounded-md
-            h-8
-            hover:text-white hover:bg-blue-600 hover:text-gray-100
-          "
-          >Upgrade Account</div
-        >`,
-        link: "https://google.com",
-        component: "MenuUpgradeComponent",
-      },
-      {
-        text: "Students Online",
-        active: false,
-        body: `<span class="
-        border-solid
-        rounded-md
-        border-1
-        border-blue-800 
-        p-1
-        bg-blue-100
-        text-blue-800
-        border-right border-white
-        mx-2
-        "
-        >36</span
-        >`,
-        link: "https://google.com",
-        component: MenuStudentsOnline,
-        icon: "",
-      },
+      // { text: "", body: "", link: "https://google.com", component: "" },
+      // {
+      //   text: "",
+      //   active: false,
+      //   menuClass: "w-screen poop",
+      //   body: `<div
+      //     class="outline-red-500 bg-blue-500 text-white flex items-center justify-center
+      //       px-8
+      //       py-2
+      //       rounded-md
+      //       h-8
+      //       hover:text-white hover:bg-blue-600 hover:text-gray-100
+      //     "
+      //     >Upgrade Account</div
+      //   >`,
+      //   link: "https://google.com",
+      //   component: "MenuUpgradeComponent",
+      // },
+      // {
+      //   text: "Students Online",
+      //   active: false,
+      //   body: `<span class="
+      //   border-solid
+      //   rounded-md
+      //   border-1
+      //   border-blue-800
+      //   p-1
+      //   bg-blue-100
+      //   text-blue-800
+      //   border-right border-white
+      //   mx-2
+      //   "
+      //   >36</span
+      //   >`,
+      //   link: "https://google.com",
+      //   component: MenuStudentsOnline,
+      //   icon: "",
+      // },
 
       {
         text: "",
@@ -143,7 +144,7 @@ export const useMenuStore = defineStore("menu", {
       {
         text: "",
         active: false,
-        body: "",
+        body: "<div class='bg-red-700 rounded-full w-2 h-2 p-2 top-2 absolute animate-ping'></div>",
         link: "https://google.com",
         component: MenuNotificationComponent,
         icon: NotificationIcon,
@@ -168,6 +169,7 @@ export const useMenuStore = defineStore("menu", {
       item.active = true;
       console.log("set-active", item);
       this.activeItem = item;
+      this.showAction = true;
     },
     clearActive(item) {
       item.active = false;

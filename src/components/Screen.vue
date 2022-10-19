@@ -1,4 +1,5 @@
 <script setup>
+import { RouterView } from "vue-router";
 import BannerNotifications from "./BannerNotifications.vue";
 import ScreenDashboard from "./ScreenDashboard.vue";
 import SubMenuTop from "./SubMenuTop.vue";
@@ -11,6 +12,9 @@ let activeScreen = screens[0];
   <div class="w-full h-full pt-16 flex flex-col">
     <SubMenuTop />
     <BannerNotifications />
-    <component :is="activeScreen"></component>
+    <Transition>
+      <!-- <component :is="activeScreen"></component> -->
+      <RouterView />
+    </Transition>
   </div>
 </template>

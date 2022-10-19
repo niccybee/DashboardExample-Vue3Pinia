@@ -11,7 +11,6 @@ let n = useNotificationStore();
     <BannerNotificationSingle
       v-for="i in n.banners"
       :item="i"
-      v-show="i.active"
       @dismiss="i.active = !i.active"
     />
   </div>

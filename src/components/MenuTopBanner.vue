@@ -18,5 +18,5 @@ function onMenuClick(event) {
     <Icon class="fill-white icon-fix p-2" />
     <MenuList />
   </div>
-  <MenuActive />
+  <!-- <MenuActive /> -->
 </template>
